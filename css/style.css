@@ -2,12 +2,12 @@ body{
 	margin:0;
 	font-family: 'PT Sans', sans-serif;
 	font-size: 15px;
-	line-height: 1.6; /* межстрочный отступ */
+	line-height: 1.6;
 	color:#333;
 }
 
 *, *:before, *:after{
-	box-sizing: border-box; /*Свойства width и height включают в себя значения полей и границ, но не отступов (margin)*/
+	box-sizing: border-box;
 }
 
 h1,h2,h3,h4,h5,h6{
@@ -30,18 +30,18 @@ hr{
 width: 100%;
 max-width: 1230px;
 padding: 0 15px;
-margin:0 auto; /*0 от верхнего и нижнего края, от левого и правого значения отступов автоматически установятся браузером, так чтобы было по центру*/
+margin:0 auto;
 }
 
 /* Intro */
 
 .intro{
 	width:100%;
-	height: 100vh; /*вся высота экрана пользователя*/
+	height: 100vh; 
 	min-height: 830px;
 	position: relative;
-	background: url(../images/intro.jpg) center no-repeat; /*background: [background-attachment || background-color || background-image || background-position || background-repeat] | inherit*/
-	background-size: cover; /*растягивает по всей щирине экрана пользователя*/
+	background: url(../images/intro.jpg) center no-repeat; 
+	background-size: cover; 
 }
 
 .intro__title{
@@ -83,27 +83,25 @@ margin:0 auto; /*0 от верхнего и нижнего края, от лев
 	background-size: cover;
 	padding-top:30px;
 	transition: padding 0.2s linear;
-	z-index:1000; /*поверх всего остального*/
+	z-index:1000;
 }
 
 .header__inner{
-	display:flex; /*генерирует flex-контейнер уровня блока*/
+	display:flex; 
 	position: relative;
-	justify-content: space-between; /*Flex-элементы равномерно распределяются по линии. 
-	Первый flex-элемент помещается вровень с краем начальной линии, последний flex-элемент — вровень с краем конечной линии, 
-	а остальные flex-элементы на линии распределяются так, чтобы расстояние между любыми двумя соседними элементами было одинаковым.*/
-	align-items:center; /*Выравнивает флекс элементы по горизонтали по центру*/
+	justify-content: space-between; 
+	align-items:center; 
 }
 
 .header__logo{
 	font-size: 30px;
-	font-weight: 700; /*Устанавливает насыщенность шрифта. Значение устанавливается от 100 до 900 с шагом 100.*/
+	font-weight: 700;
 	color:#fff;
 }
 
 .header__link{
 	color: inherit;
-	text-decoration: none; /*Подчеркивание сссылок снизу убираем*/
+	text-decoration: none;
 }
 /* Nav */
 
@@ -112,17 +110,17 @@ margin:0 auto; /*0 от верхнего и нижнего края, от лев
 	text-transform: uppercase;
 }
 .nav__link{
-	display:inline-block; /*Это значение генерирует блочный элемент, который обтекается другими элементами веб-страницы подобно встроенному элементу.*/
+	display:inline-block;
 	vertical-align:top;
 	margin: 0 15px;
 	
 	position:relative;
 	color:#fff;
-	text-decoration: none; /*Подчеркивание сссылок снизу убираем*/
-	transition: color 0.2s linear; /*Эффект смены состояния, в частности цвета linear- с одинаковой скоростью*/
+	text-decoration: none; 
+	transition: color 0.2s linear; 
 }
 
-.nav__link:hover{ /*При наведении*/
+.nav__link:hover{ 
 	color:#fce38a;
 }
 
@@ -130,7 +128,7 @@ margin:0 auto; /*0 от верхнего и нижнего края, от лев
 	content: "";
 	display:block;
 	
-	opacity:0; /*Непрозрачность*/
+	opacity:0;
 	transition: opacity 0.2s linear;
 	width:100%;
 	height:2px;
@@ -158,48 +156,6 @@ margin:0 auto; /*0 от верхнего и нижнего края, от лев
 	top: 1px;
 	font-size: 30px;
 	color: #FFF;
-}
-
-
-/* Slider */
-
-.slider{
-		display:flex;
-	justify-content:space-between;
-	margin: 60px 0;
-}
-
-.slider__item{
-    width:22%;
-	font-size:18px;
-	color:#fff;
-	text-transform:uppercase;
-	position:relative;
-	
-	border-top: 2px solid #fff;
-	opacity: 0.7;
-}
-
-.slider__item.active{
-	opacity: 1;
-}
-
-.slider__item.active:before{
-	content:"";
-	position:absolute;
-	
-	background-color: #ffe033;
-	display:block;
-	width: 25%;
-	height: 3px;
-	top:-3px;
-	left:0;
-	z-index:1;
-}
-
-.slider__num{
-	font-size:22px;
-	font-weight:700;
 }
 
 /* Section */
